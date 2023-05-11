@@ -67,7 +67,7 @@
                   <a class="trend-tag-name" href="#0">Interior</a>
                 </li>
               </ul>
-              <h3><a class="trend-description" href="#0">Сейчас в тренде: Сад на подоконнике</a></h3>
+              <h3 class="tr-desc"><a class="trend-description" href="#0">Сейчас в тренде: Сад на подоконнике</a></h3>
             </div>
           </div>
 
@@ -79,7 +79,7 @@
                   <a class="trend-tag-name" href="#0">Food</a>
                 </li>
               </ul>
-              <h3><a class="trend-description" href="#0">Сыра на красивых картинках из интернета: Какие они на вкус?</a></h3>
+              <h3 class="tr-desc"><a class="trend-description" href="#0">Сыра на красивых картинках из интернета: Какие они на вкус?</a></h3>
             </div>
           </div>
 
@@ -94,7 +94,7 @@
                   <a class="trend-tag-name" href="#0">Travel</a>
                 </li>
               </ul>
-              <h3><a class="trend-description" href="#0">Собираемся в первый поход в горы</a></h3>
+              <h3 class="tr-desc"><a class="trend-description" href="#0">Собираемся в первый поход в горы</a></h3>
             </div>
           </div>
 
@@ -109,7 +109,7 @@
                   <a class="trend-tag-name" href="#0">Health</a>
                 </li>
               </ul>
-              <h3><a class="trend-description" href="#0">Сейчас в тренде: Сколько витамина С в лимонах</a></h3>
+              <h3 class="tr-desc"><a class="trend-description" href="#0">Сейчас в тренде: Сколько витамина С в лимонах?</a></h3>
             </div>
           </div>
         </div>
@@ -165,7 +165,8 @@
               <h2 class="post-name"><a href="#0">Лучшие музыкальные фестивали этого лета</a></h2>
               <time class="post-date" datetime="2019-06-19">10 июня 2019</time>
               <a class="post-author-name" href="#0">Неизвесный автор</a>
-              <p class="post-content">Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?<br>Мы составили список лучших летних фестивалей по всему миру.</p>
+              <p class="post-content">Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?</p>
+              <p class="post-content-plus">Мы составили список лучших летних фестивалей по всему миру.</p>
             </div>
           </article>
 
@@ -354,12 +355,18 @@
 
           <article class="product">
             <div class="product__imgbox">
-              <img class="product__image" src="../mq-diploma/images/shop-item-desk1.jpg" alt="Подушка">
+              <picture>
+                <source media="(min-width: 1201px)" srcset="../mq-diploma/images/shop-item-desk1.jpg">
+                <source media="(min-width: 641px) and (max-width: 1200px)" 
+                srcset="../mq-diploma/images/shop-item-tablet1.jpg">
+                <source media="(max-width: 640px)" srcset="../mq-diploma/images/shop-item-mobile1.jpg">
+                <img src="../mq-diploma/images/shop-item-desk1.jpg" alt="Подушки на диван" class="product__image">
+              </picture>
             </div>
             <div class="product__body">
               <div class="product__content">
                 <h3 class="product__title">Подушка на диван</h3>
-                <div class="product__descriptio12n">
+                <div class="product__description">
                   <p>Набор из двух подушек с модными принтами. Видео о создании
                     <a href="#0" class="product__link">здесь</a>.
                   </p>
@@ -384,7 +391,13 @@
 
           <article class="product">
             <div class="product__imgbox">
-              <img class="product__image" src="../mq-diploma/images/shop-item-desk2.jpg" alt="Мягкая игрушка Зайчик">
+             <picture>
+                <source media="(min-width: 1201px)" srcset="../mq-diploma/images/shop-item-desk2.jpg">
+                <source media="(min-width: 641px) and (max-width: 1200px)" 
+                srcset="../mq-diploma/images/shop-item-tablet2.jpg">
+                <source media="(max-width: 640px)" srcset="../mq-diploma/images/shop-item-mobile2.jpg">
+                <img src="../mq-diploma/images/shop-item-desk2.jpg" alt="Мягкая игрушка Зайчик" class="product__image">
+              </picture>
             </div>
             <div class="product__body">
               <div class="product__content">
@@ -413,7 +426,13 @@
 
           <article class="product">
             <div class="product__imgbox">
-              <img class="product__image" src="../mq-diploma/images/shop-item-desk3.jpg" alt="Подушка">
+             <picture>
+                <source media="(min-width: 1201px)" srcset="../mq-diploma/images/shop-item-desk3.jpg">
+                <source media="(min-width: 641px) and (max-width: 1200px)" 
+                srcset="../mq-diploma/images/shop-item-tablet3.jpg">
+                <source media="(max-width: 640px)" srcset="../mq-diploma/images/shop-item-mobile3.jpg">
+                <img src="../mq-diploma/images/shop-item-desk3.jpg" alt="Необычные рамки" class="product__image">
+              </picture>
             </div>
             <div class="product__body">
               <div class="product__content">
@@ -455,6 +474,60 @@
       <a class="copirait" href="#0">Copyright © 2009–2019 City Blog LLC.<span class="visually-hidden">Copyright © 2009–2019 City Blog LLC.</span>
       </a>
     </footer>
+    
+    <section class="popup">
+      <div class="modal-window">
+        <div class="modal-window-backdrop"></div>
+        <div class="modal-window-body">
+          <button class="modal-window-close" id="close">
+            <svg class="modal-X-button-icon">
+              <use xlink:href="#X-button"></use>
+            </svg><span class="modal-screenreader-only">Закрыть</span>
+          </button>
+          <h2 class="underlined-title modal-window-title">
+            ваш фидбек
+          </h2>
+          <form action="#">
+            <label for="modal-select-frequency">
+              <span class="modal-form-question-text">
+                Как часто вы заходите на сайт?
+              </span>
+            </label>
+            <select class="modal-select-frequency field-input" name="user-answer-select-frequency" id="modal-select-frequency">
+              <option value="1">Почти каждый день</option>
+              <option value="2">Раз в несколько дней</option>
+              <option value="3">Раз в несколько недель</option>
+              <option value="4">Несколько раз в год</option>
+            </select>
+            <p class="modal-form-question-text">
+              Вы подписаны на e-mail рассылку?
+            </p>
+            <div class="modal-radio-wrapper">
+              <input class="modal-radio-button hidden-clipped" type="radio" value="yes" name="modal-radio" id="modal-radio-yes" checked />
+              <label class="modal-radio-label" for="modal-radio-yes">
+                Да
+              </label>
+              <input class="modal-radio-button hidden-clipped" type="radio" value="no" name="modal-radio" id="modal-radio-no" />
+              <label class="modal-radio-label" for="modal-radio-no">
+                Нет
+              </label>
+            </div>
+            <p class="modal-form-question-text">
+              Расскажите, какой контент вы хотели бы видеть на
+              нашем сайте?
+            </p>
+            <textarea class="modal-textarea field-input" name="modal-textarea" id="modal-textarea" placeholder="Может, больше рецептов?"></textarea>
+            <button class="modal-submit-button" type="submit">
+              <span class="modal-submit-button-text">
+                отправить
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   </body>
 
-</body></html>
+</body>
+
+</html>
