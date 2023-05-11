@@ -294,28 +294,28 @@
           <section class="side-panel-tags">
             <h4 class="panel-tags-header">Теги</h4>
             <ul class="panel-tags-titel">
-              <li href="#0" class="panel-tags-link">Fashion
+              <li><a href="#0" class="panel-tags-link">Fashion</a>
                 <span class="visually-hidden">Fashion</span>
               </li>
-              <li href="#0" class="panel-tags-link">Music
+              <li><a href="#0" class="panel-tags-link">Music</a>
                 <span class="visually-hidden">Music</span>
               </li>
-              <li href="#0" class="panel-tags-link">Lifeslyle
+              <li><a href="#0" class="panel-tags-link">Lifeslyle</a>
                 <span class="visually-hidden">Lifeslyle</span>
               </li>
-              <li href="#0" class="panel-tags-link">Art
+              <li><a href="#0" class="panel-tags-link">Art</a>
                 <span class="visually-hidden">Art</span>
               </li>
-              <li href="#0" class="panel-tags-link">Interior
+              <li><a href="#0" class="panel-tags-link">Interior</a>
                 <span class="visually-hidden">Interior</span>
               </li>
-              <li href="#0" class="panel-tags-link">Travel
+              <li><a href="#0" class="panel-tags-link">Travel</a>
                 <span class="visually-hidden">Travel</span>
               </li>
-              <li href="#0" class="panel-tags-link">Food
+              <li><a href="#0" class="panel-tags-link">Food</a>
                 <span class="visually-hidden">Food</span>
               </li>
-              <li href="#0" class="panel-tags-link">Health
+              <li><a href="#0" class="panel-tags-link">Health</a>
                 <span class="visually-hidden">Health</span>
               </li>
             </ul>
@@ -476,24 +476,23 @@
     </footer>
     
     <section class="popup">
-      <div class="modal-window">
+      <div class="modal-window" id="modal">
         <div class="modal-window-backdrop"></div>
         <div class="modal-window-body">
           <button class="modal-window-close" id="close">
-            <svg class="modal-X-button-icon">
-              <use xlink:href="#X-button"></use>
-            </svg><span class="modal-screenreader-only">Закрыть</span>
+            <img class="modal-x-button-icon" src="svg/form-x.svg" Alt="Закрыть">
+           <span class="visually-hidden">Закрыть</span>
           </button>
-          <h2 class="underlined-title modal-window-title">
+          <h2 class="modal-window-title">
             ваш фидбек
           </h2>
-          <form action="#">
+          <form>
             <label for="modal-select-frequency">
               <span class="modal-form-question-text">
                 Как часто вы заходите на сайт?
               </span>
             </label>
-            <select class="modal-select-frequency field-input" name="user-answer-select-frequency" id="modal-select-frequency">
+            <select class="modal-select-frequency">
               <option value="1">Почти каждый день</option>
               <option value="2">Раз в несколько дней</option>
               <option value="3">Раз в несколько недель</option>
@@ -503,11 +502,11 @@
               Вы подписаны на e-mail рассылку?
             </p>
             <div class="modal-radio-wrapper">
-              <input class="modal-radio-button hidden-clipped" type="radio" value="yes" name="modal-radio" id="modal-radio-yes" checked />
-              <label class="modal-radio-label" for="modal-radio-yes">
+            <input class="modal-radio-button" type="radio" value="yes" name="modal-radio" id="modal-radio-yes" checked>
+             <label class="modal-radio-label" for="modal-radio-yes">
                 Да
               </label>
-              <input class="modal-radio-button hidden-clipped" type="radio" value="no" name="modal-radio" id="modal-radio-no" />
+              <input class="modal-radio-button" type="radio" value="no" name="modal-radio" id="modal-radio-no">
               <label class="modal-radio-label" for="modal-radio-no">
                 Нет
               </label>
@@ -516,7 +515,7 @@
               Расскажите, какой контент вы хотели бы видеть на
               нашем сайте?
             </p>
-            <textarea class="modal-textarea field-input" name="modal-textarea" id="modal-textarea" placeholder="Может, больше рецептов?"></textarea>
+            <textarea class="modal-textarea" name="modal-textarea" id="modal-textarea" placeholder="Может, больше рецептов?"></textarea>
             <button class="modal-submit-button" type="submit">
               <span class="modal-submit-button-text">
                 отправить
