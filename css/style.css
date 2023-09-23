@@ -13,6 +13,7 @@
 }
 
 body {
+  min-width: 360px;
   font-family: Open Sans, Arial, sans-serif;
   font-weight: normal;
   width: 100%;
@@ -201,8 +202,8 @@ a {
 .trend-container {
   width: calc(25% - 3px);
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: stretch;
   position: relative;
   margin-right: 4px;
 }
@@ -225,7 +226,7 @@ a {
 }
 
 .trend-content {
-  max-height: 90%;
+  max-height: 68%;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -233,6 +234,7 @@ a {
   z-index: 1;
   border: 3px solid rgb(181, 159, 91, 0.6);
   margin: 0px 20px 15px;
+  overflow: auto;
 }
 
 .trend-list {
@@ -353,8 +355,8 @@ a {
 
 .side-panel {
   width: 272px;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 50px;
 }
 
@@ -466,7 +468,7 @@ a {
   flex-direction: column;
   position: relative;
   margin-top: 40px;
-  
+
 }
 
 .panel-mailing-titel {
@@ -742,7 +744,7 @@ footer {
   position: relative;
   background: #f4f7f6;
   list-style: none;
-  
+
 }
 
 .dribbble {
@@ -802,7 +804,7 @@ a.copirait {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 60px;
+  top: 15px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -819,7 +821,8 @@ a.copirait {
 }
 
 .modal-window-body {
-  max-width: 320px;
+  box-sizing: border-box;
+  max-width: 390px;
   padding: 50px 30px;
   background-color: #ffffff;
   position: fixed;
@@ -828,7 +831,7 @@ a.copirait {
 .modal-window-close {
   position: absolute;
   right: 0;
-  top: -25px;
+  top: -27px;
   cursor: pointer;
   background: none;
   border: none;
@@ -843,7 +846,6 @@ a.copirait {
 
 .modal-window-title {
   font-size: 20px;
-  margin-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -858,8 +860,12 @@ a.copirait {
   background: #e1d9bd;
 }
 
+.form-popup {
+  width: 329px;
+}
+
 .modal-form-question-text {
-  margin-top: 35px;
+  margin-top: 27px;
   margin-bottom: 10px;
   font-size: 13px;
 }
@@ -868,7 +874,8 @@ a.copirait {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 100%;
+  border: none;
+  width: 330px;
   height: 50px;
   padding-left: 20px;
   padding-right: 20px;
@@ -907,21 +914,22 @@ a.copirait {
 
 
 .modal-textarea {
-  width: 280px;
-  height: 100px;
+  box-sizing: border-box;
+  min-width: 330px;
+  max-width: 330px;
+  min-height: 130px;
   max-height: 130px;
-  padding-top: 20px;
+  padding: 15px;
   font-size: 13px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding-left: 20px;
-  padding-right: 20px;
+  border: none;
   background-color: #f4f7f6;
 }
 
 .modal-submit-button {
-  width: 100%;
+  width: 330px;
   height: 50px;
   color: #ffffff;
   text-transform: uppercase;
@@ -932,7 +940,7 @@ a.copirait {
 }
 
 .modal-submit-button:hover {
-   background-color: #323232;
+  background-color: #323232;
 }
 
 
@@ -940,20 +948,20 @@ a.copirait {
   .menu__button {
     display: none;
   }
-  
-  .trend-container:last-child {
-  margin-right: 0px;
-}
-  
-  .container-post:last-child {
-  margin-bottom: 64px;
-}
 
-  
+  .trend-container:last-child {
+    margin-right: 0px;
+  }
+
+  .container-post:last-child {
+    margin-bottom: 64px;
+  }
+
+
   .product:nth-child(3n+2) {
-  margin-right: 65px;
-  margin-left: 65px;
-}
+    margin-right: 65px;
+    margin-left: 65px;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 1200px) {
@@ -1069,26 +1077,15 @@ a.copirait {
   .product__title {
     font-size: 17px;
   }
-  
-  .side-panel-mailing {
-    #margin-top: 38px;
-  }
-  
-  .side-panel-tags {
-    #margin-top: 37px
-  }
-  
-  .side-panel-themes {
-    #margin-top: 34px;
-}
+
 }
 
 @media (orientation: landscape) and (min-width: 641px) and (max-width: 1200px) {
 
-    .trend-container:last-child {
-  margin-right: 0px;
-}
-  
+  .trend-container:last-child {
+    margin-right: 0px;
+  }
+
   .trend-content {
     padding: 10% 5px 10px 5%;
     margin: 0 6% 6%;
@@ -1139,14 +1136,10 @@ a.copirait {
 }
 
 @media (max-width: 640px) {
-  
-  body {
-    min-width: 330px;
-  }
+
 
   .container-header {
     justify-content: center;
-    padding-top: 225px;
   }
 
   .header-logo {
@@ -1156,6 +1149,7 @@ a.copirait {
   .welcome {
     width: 100%;
     height: 639px;
+    justify-content: center;
     margin-bottom: 40px;
     background-image: url(../images/banner-mobile.jpg);
     background-position: center center;
@@ -1179,15 +1173,15 @@ a.copirait {
     top: 30px;
     right: 15px;
   }
-  
+
   .titel-top::before {
     top: 29px;
   }
-  
+
   .now-trending {
     font-size: 16px;
   }
-  
+
   .trend-image {
     height: 230px;
   }
@@ -1195,11 +1189,12 @@ a.copirait {
   .trend-container {
     width: 100%;
   }
-  
+
   .trend-content {
+    max-height: 62%;
     padding: 26px 15px;
   }
-  
+
   .trend-description {
     font-size: 16px;
     line-height: 20px;
@@ -1232,7 +1227,7 @@ a.copirait {
   .post-photo {
     width: 100%;
     height: 100%;
-    
+
   }
 
   .post {
@@ -1261,66 +1256,66 @@ a.copirait {
     margin-top: 0.7em;
     margin-bottom: 0;
   }
-  
-  .side-panel{
+
+  .side-panel {
     width: 100%;
     margin-bottom: 29px;
   }
-  
+
   .panel-post-titel {
     font-size: 16px;
   }
-  
+
   .mailing-form {
     display: flex;
     flex-direction: column;
   }
-  
-  .search-form{
-  min-width: 272px;  
+
+  .search-form {
+    min-width: 272px;
   }
-  
+
   .search-group {
     display: flex;
     flex-grow: 1;
   }
-  
+
   .side-panel-mailing {
     margin-top: 19px;
   }
-  
+
   .panel-mailing-titel {
     font-size: 16px;
   }
-  
+
   .mailing-field {
     width: 100%;
   }
-  
+
   .mailing-button {
-    width: 100%;  
+    width: 100%;
   }
-  
+
   .side-panel-tags {
     margin-top: 15px;
   }
-  
+
   .panel-tags-titel {
     font-size: 16px;
   }
-  
+
   .side-panel-themes {
     margin-top: 0px;
   }
-  
+
   .panel-themes-titel {
     font-size: 16px;
   }
-  
+
   .our-products {
     font-size: 16px;
   }
-  
+
   .products {
     flex-direction: column;
     align-items: center;
@@ -1331,29 +1326,52 @@ a.copirait {
     min-width: 310px;
     margin-bottom: 24px;
   }
-  
+
   .product__title {
     font-size: 17px;
   }
-  
+
   .footer-top {
     margin-top: 21px;
   }
+
+  .modal-window-body {
+    max-width: 330px;
+    padding: 30px 25px;
+  }
+
+  .modal-select-frequency {
+    width: 280px;
+  }
+
+  .modal-form-question-text {
+    width: 280px;
+  }
+
+  .modal-textarea {
+    max-width: 280px;
+    min-width: 280px;
+  }
+
+  .modal-submit-button {
+    width: 280px;
+  }
+
+  .modal-window-title {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+  }
+
+  .modal-window-title::before {
+    top: 61px;
+  }
+
 }
 
 @media (orientation: landscape) and (max-width: 640px) {
 
   .container-header {
     width: 91%;
-    padding-top: 32px;
-  }
-
-  .welcome {
-    width: 100%;
-    height: 639px;
-    margin-bottom: 50px;
-    background-image: url(../images/banner-mobile.jpg);
-    background-position: center center;
   }
 
   .welcome-title {
@@ -1368,6 +1386,7 @@ a.copirait {
 
   .trend-container {
     width: calc(50% - 3px);
+    align-items: center;
   }
 
   .trend-container:nth-child(even) {
@@ -1385,15 +1404,21 @@ a.copirait {
     display: none;
   }
 
+  .container-header {
+    width: 91%;
+  }
+
   .trend-container {
     width: 100%;
     display: flex;
+    align-items: center;
     margin-right: 0;
     margin-bottom: 4px;
-    
+
   }
-  
+
   .trend-content {
     flex-grow: 1;
   }
+
 }
